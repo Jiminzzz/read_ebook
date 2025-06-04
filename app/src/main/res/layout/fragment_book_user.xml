@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BookUserFragment">
+
+<!--Search-->
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#C3251A"
+        android:hint="Search"
+        android:padding="10dp"
+        android:textColorHint="#ffff" />
+
+    <!--RecylerView : Load books-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/booksRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchEt"
+        android:layout_marginTop="65dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:reverseLayout="true"
+        app:stackFromEnd="true"
+        tools:listitem="@layout/row_pdf_user" />
+
+</FrameLayout>

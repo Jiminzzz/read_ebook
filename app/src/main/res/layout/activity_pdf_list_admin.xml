@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PdfListAdminActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#202131">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="170dp"
+            android:layout_marginTop="29dp"
+
+            android:text="Book"
+            android:textColor="#F6F5F5"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTv"
+            android:layout_alignStart="@+id/titleTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-7dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="7dp"
+            android:text="Category"
+            android:textColor="#F6F5F5"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/BookRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchEt"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="32dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_pdf_admin" />
+
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtitleTv"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="29dp"
+            android:background="#C3251A"
+            android:ems="10"
+            android:hint="search"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#EADCDC"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

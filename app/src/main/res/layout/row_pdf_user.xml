@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="148dp"
+    app:cardBackgroundColor="#202131">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/pdfRl"
+            android:layout_width="108dp"
+            android:layout_height="148dp"
+            android:layout_marginEnd="5dp"
+            android:background="#CDBEBE">
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pdfRl"
+            android:maxLines="1"
+            android:text="Book Title"
+            android:textColor="#FAF7F7" />
+
+        <TextView
+            android:id="@+id/descriptionTv"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTv"
+            android:layout_toEndOf="@id/pdfRl"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:shadowColor="#F3EFEF"
+            android:text="Book description"
+            android:textColor="#F3EFEF" />
+
+        <TextView
+            android:id="@+id/categoryTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:maxLines="1"
+            android:text="Category"
+            android:textColor="#F8F5F5" />
+
+        <TextView
+            android:id="@+id/sizeTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="25dp"
+            android:layout_toEndOf="@id/pdfRl"
+            android:maxLines="1"
+            android:text="N/A"
+            android:textColor="#F8F2F2" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="3dp"
+
+            android:layout_toStartOf="@id/categoryTv"
+            android:layout_toEndOf="@id/sizeTv"
+            android:maxLines="1"
+            android:shadowColor="#F3F2F2"
+            android:text="dd/MM/yyyy"
+            android:textAlignment="center"
+            android:textColor="#EFE8E8" />
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
